@@ -1,0 +1,47 @@
+.dashboard_wrapper{
+    .ant-card{
+        border-radius: 10px;
+        .action_button{
+            display: flex;
+            .action_btn{
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+                text-align: center;
+                border-radius: 5px;
+                border: solid 1px #eee;
+                margin-right: 10px;
+                padding: initial;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &.view_btn{
+                    background-color: $primary-color;
+                    color: $color-white;
+                    border-color: $primary-color;
+                }
+                &.edit_btn{
+                    background-color: #ffb101;
+                        color: $primary-color;
+                        border-color: #ffb101;
+                }
+                &.delete_btn{
+                    background-color: $third-color;
+                    color: $color-white;
+                    border-color: $third-color;
+                }
+            }
+        }
+        .certificate_list_head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width:360px) {
+            .certificate_list_head{
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.upload_wrapper {
+    position: relative;
+    // overflow: hidden;
+    display: block;
+    .upload_box {
+        border: 1px dashed #ced4da;
+        color: $primary-color;
+        background-color: $color-white;
+        padding: 40px 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        &:focus{
+            border-color: $primary-color;
+        }
+    }
+
+    input[type=file] {
+        font-size: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,235 @@
+// Font-Family start
+@font-face {
+  font-family: "avenir";
+  src: url('./fonts/Avenir-Light.eot') format("embedded-opentype"),
+          url('./fonts/Avenir-Light.woff') format("woff"),
+          url('./fonts/Avenir-Light.woff2') format("woff2"),
+          url('./fonts/Avenir-Light.ttf') format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "avenir";
+  src: url('./fonts/Avenir-Regular.eot') format("embedded-opentype"),
+          url('./fonts/Avenir-Regular.woff') format("woff"),
+          url('./fonts/Avenir-Regular.woff2') format("woff2"),
+          url('./fonts/Avenir-Regular.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir";
+  src: url('./fonts/Avenir-Medium.eot') format("embedded-opentype"),
+          url('./fonts/Avenir-Medium.woff') format("woff"),
+          url('./fonts/Avenir-Medium.woff2') format("woff2"),
+          url('./fonts/Avenir-Medium.ttf') format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir";
+  src: url('./fonts/Avenir-Heavy.eot') format("embedded-opentype"),
+          url('./fonts/Avenir-Heavy.woff') format("woff"),
+          url('./fonts/Avenir-Heavy.woff2') format("woff2"),
+          url('./fonts/Avenir-Heavy.ttf') format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url('./fonts/Avenir-Black.eot') format("embedded-opentype"),
+          url('./fonts/Avenir-Black.woff') format("woff"),
+          url('./fonts/Avenir-Black.woff2') format("woff2"),
+          url('./fonts/Avenir-Black.ttf') format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+// Font-Family end
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'avenir', sans-serif !important;
+  background-color: $bg-body !important;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: $color-dark;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+// Container min media query start
+@mixin media($width) {
+  @media screen and (min-width: $width) {
+      @content;
+  }
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left:auto
+}
+
+@include media(576px) {
+  .container, .container-sm {
+      max-width:100%
+  }
+}
+
+@include media(768px) {
+  .container, .container-md, .container-sm {
+      max-width:720px
+  }
+}
+
+@include media(992px) {
+  .container, .container-lg, .container-md, .container-sm {
+      max-width:960px
+  }
+}
+
+@include media(1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width:1140px
+  }
+}
+
+@include media(1600px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width:1320px
+  }
+}
+
+
+// custom scroll css start
+// width
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+// Handle
+::-webkit-scrollbar-thumb {
+  background: $color-lighter; 
+  border-radius: 10px;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: $color-lighter; 
+}
+
+.form_group {
+  label {
+    font-size: 15px;
+  }
+
+  .form_control {
+    height: 40px;
+    border-radius: 5px;
+    background-color: $color-white;
+    border: solid 1px #ced4da;
+
+    &:focus {
+      box-shadow: none;
+      border: solid 1px $primary-color;
+    }
+  }
+  
+  .form_text_area{
+    border-radius: 5px;
+      background-color: $color-white;
+      border: solid 1px #ced4da;
+    
+      &:focus {
+        box-shadow: none;
+        border: solid 1px $primary-color;
+      }
+  }
+}
+
+// table
+.ant-pagination-item-active{
+  border-color: $primary-color;
+}
+.ant-pagination-item-active a{
+  color: $primary-color;
+}
+.ant-pagination-item:hover{
+  border-color: $primary-color;
+}
+.ant-pagination-item:hover a{
+  color: $primary-color;
+}
+
+// popover
+.ant-popover-content{
+  background: $color-white;
+  .ant-popover-inner{
+    border-radius: 14px; 
+    .ant-popover-message{
+      margin-bottom: 10px;
+    }  
+    .ant-popover-buttons{
+      .ant-btn-default{                
+        height: 30px;
+        padding: 3px 15px;
+        background-color: $color-white;
+        border-color: $primary-color;
+        color: $primary-color;
+        border-radius: 6px;      
+      }
+      .ant-btn-primary{
+        height: 30px;
+        padding: 3px 15px;
+        background: $primary-color;
+        border-color: $primary-color;
+        color: $color-white-light;
+        border-radius: 6px;
+      }
+    } 
+  }
+}
+
+// Require sign css start
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  position: absolute;
+  right: -8px;
+  margin-right: 0;
+}

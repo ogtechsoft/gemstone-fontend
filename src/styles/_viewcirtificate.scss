@@ -1,0 +1,114 @@
+.view_cirtificate_wrapper {
+    .view_cirtificate_print {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }   
+    .ant-card {
+        padding: 20px 0;
+        border-radius: 10px;
+        .view_cirtificate_head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .view_cirtificate_logo{
+                img{
+                    height: 58px;
+                }
+            }
+            .view_cirtificate_text{
+                max-width: 380px;
+            }
+        }
+
+        .laboratory_report_title{
+            border-top: 1px solid #5d6975;
+            border-bottom: 1px solid #5d6975;
+            color: #2b2d8e;
+            font-size: 24px;
+            line-height: 1.4em;
+            text-align: center;
+            margin: 40px 0 20px 0;
+            padding: 2px 0;
+            font-weight: normal;
+            background-image: url("../assets/images/shape.png");
+        }
+
+        .laboratory_report_table{
+            .laboratory_report_table_item{
+                // max-width: 500px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 5px;
+                padding: 10px 15px;
+                &:nth-child(odd){
+                    background-color: $color-white-light;
+                }
+                .right_content{
+                    max-width: 280px;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+
+        .product_img{
+            max-width: 250px;
+            margin: 0 auto;
+            margin-top: 20px;
+            img{
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                border-radius: 5px;
+            }
+        }
+        @media (max-width:992px) {
+            .laboratory_report_table {
+                .laboratory_report_table_item {
+                    .right_content {
+                        max-width: 180px;
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        @media (max-width:480px) {
+            .laboratory_report_table {
+                .laboratory_report_table_item {
+                    .right_content {
+                        max-width: max-content;
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .view_cirtificate_wrapper {
+        .view_cirtificate_print {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .ant-card {
+            padding: 20px 0;
+            border-radius: 10px;
+
+            .view_cirtificate_head {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .view_cirtificate_logo{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
