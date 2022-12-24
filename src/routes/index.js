@@ -10,6 +10,8 @@ import ProtectedRoutes from "./ProtectedRoutes";
 // import UnRestrictedRoutes from "./UnRestrictedRoutes";
 import Editcirtificate from "../pages/editcirtificate/Editcirtificate";
 import Reportdetail from "../pages/reportdetail/Reportdetail";
+import AddGemCertificate from "../pages/addGemCertificate/AddGemCertificate";
+import EditGemCertificate from "../pages/editGemCertificate/EditGemCertificate";
 
 // importing components for routes
 
@@ -18,14 +20,70 @@ const AppRoutes = () => {
     <Fragment>
       <BrowserRouter>
         <Routes>
-          <Route path='admin' element={<Login /> } />
-          <Route path='/' element={<Reportcheck />} />
-          <Route path='report/:id' element={<Reportdetail />} />
+          <Route path="admin" element={<Login />} />
+          <Route path="/" element={<Reportcheck />} />
+          <Route path="report/:id" element={<Reportdetail />} />
           {/* <Route path="/" element={<ProtectedRoutes><MainLayout /></ProtectedRoutes> }> */}
-            <Route path='dashboard' element={<ProtectedRoutes><MainLayout><Dashboard /></MainLayout></ProtectedRoutes>} />
-            <Route path='add-certificate' element={<ProtectedRoutes><MainLayout><Addcirtificate /></MainLayout></ProtectedRoutes>} />
-            <Route path='edit-certificate/:id' element={<ProtectedRoutes><MainLayout><Editcirtificate /></MainLayout></ProtectedRoutes>} />
-            <Route path='view-certificate/:id' element={<ProtectedRoutes><MainLayout><Viewcirtificate /></MainLayout></ProtectedRoutes>} />
+          <Route
+            path="dashboard"
+            element={
+              <ProtectedRoutes>
+                <MainLayout>
+                  <Dashboard />
+                </MainLayout>
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="add-certificate"
+            element={
+              <ProtectedRoutes>
+                <MainLayout>
+                  <Addcirtificate />
+                </MainLayout>
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="add-gem-certificate"
+            element={
+              <ProtectedRoutes>
+                <MainLayout>
+                  <AddGemCertificate />
+                </MainLayout>
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="edit-certificate/:id"
+            element={
+              <ProtectedRoutes>
+                <MainLayout>
+                  <Editcirtificate />
+                </MainLayout>
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="edit-gem-certificate/:id"
+            element={
+              <ProtectedRoutes>
+                <MainLayout>
+                  <EditGemCertificate />
+                </MainLayout>
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="view-certificate/:id"
+            element={
+              <ProtectedRoutes>
+                <MainLayout>
+                  <Viewcirtificate />
+                </MainLayout>
+              </ProtectedRoutes>
+            }
+          />
           {/* </Route> */}
         </Routes>
       </BrowserRouter>

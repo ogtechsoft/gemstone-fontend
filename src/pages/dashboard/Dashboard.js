@@ -23,8 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getCertificateDetails } from "../../redux/action/getcirtificate/getcirtificate.action";
 import { deleteCertificateDetails } from "../../redux/action/deletecirtificate/deletecirtificate.action";
-import { globalSearch } from './../../utilies/utilies';
-
+import { globalSearch } from "./../../utilies/utilies";
 
 const Dashboard = () => {
   const [certificate, setCertificate] = useState([]);
@@ -32,7 +31,6 @@ const Dashboard = () => {
   const dispatch = useDispatch();
   const { Title } = Typography;
   const certificateData = useSelector((state) => state.getCertificateReducer);
-
 
   useEffect(() => {
     dispatch(getCertificateDetails());
@@ -50,10 +48,11 @@ const Dashboard = () => {
     }
   }, [certificateData]);
 
-
   const findReport = (target) => {
-    setCertificate(() => globalSearch(certificateData?.data?.rows, target.value ))
-  }
+    setCertificate(() =>
+      globalSearch(certificateData?.data?.rows, target.value)
+    );
+  };
 
   const columns = [
     {
@@ -90,7 +89,11 @@ const Dashboard = () => {
           </Link>
           <Link
             className="action_btn edit_btn"
-            to={`/edit-certificate/${record.id}`}
+            to={
+              record.type === 0
+                ? `/edit-certificate/${record.id}`
+                : `/edit-gem-certificate/${record.id}`
+            }
           >
             <EditOutlined />
           </Link>
@@ -135,17 +138,28 @@ const Dashboard = () => {
         </Col>
         <Col span={24} md={24}>
           <Card>
-            <Row >
-                <Col span={24}>
-                  <div className="certificate_list_head">
-                    <Title level={5} className="mb_2">Certificate List</Title>
-                    <Form.Item className="form_group">
-                        <Input placeholder="Find by report number" className="form_control" onChange={({target}) => findReport(target)} />
-                     </Form.Item>
-                     </div>
-                </Col>
+            <Row>
+              <Col span={24}>
+                <div className="certificate_list_head">
+                  <Title level={5} className="mb_2">
+                    Certificate List
+                  </Title>
+                  <Form.Item className="form_group">
+                    <Input
+                      placeholder="Find by report number"
+                      className="form_control"
+                      onChange={({ target }) => findReport(target)}
+                    />
+                  </Form.Item>
+                </div>
+              </Col>
             </Row>
-            <Table dataSource={certificate} columns={columns} bordered scroll={{x:'992'}} />
+            <Table
+              dataSource={certificate}
+              columns={columns}
+              bordered
+              scroll={{ x: "992" }}
+            />
           </Card>
         </Col>
       </Row>
