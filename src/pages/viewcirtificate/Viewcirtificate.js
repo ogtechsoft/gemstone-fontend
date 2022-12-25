@@ -120,9 +120,9 @@ const Viewcirtificate = () => {
                     <Title level={5} className="mt_0 mb_0 lh_1">
                       An ISO 9001:2005 Certified Organization
                     </Title>
-                    <Text>REPORT NUMBER: {reportData?.reportNumber}</Text>
+                    {/* <Text>REPORT NUMBER: {reportData?.reportNumber}</Text>
                     <br />
-                    <Text>REPORT DATE : {reportData?.reportDate}</Text>
+                    <Text>REPORT DATE : {reportData?.reportDate}</Text> */}
                   </div>
                 </div>
               </Col>
@@ -132,14 +132,24 @@ const Viewcirtificate = () => {
               <Row>
                 <Col span={24} md={14}>
                   <div className="laboratory_report_table">
-                    {/* <div className='laboratory_report_table_item'>
-                            <div><Text>Report Number</Text></div>
-                            <div><Text>{reportData?.reportNumber}</Text></div>
-                          </div> 
-                          <div className='laboratory_report_table_item'>
-                            <div><Text>Report Date</Text></div>
-                            <div><Text>{reportData?.reportDate}</Text></div>
-                          </div> */}
+                    <div className="laboratory_report_table_item">
+                      <div>
+                        <Text>Report Number</Text>
+                      </div>
+                      <div>
+                        <Text>{reportData?.reportNumber}</Text>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="laboratory_report_table_item">
+                        <div>
+                          <Text>Report Date</Text>
+                        </div>
+                        <div>
+                          <Text>{reportData?.reportDate}</Text>
+                        </div>
+                      </div>
+                    </div>
                     {certificate &&
                       certificate.map((item, i) => (
                         <div key={i}>
