@@ -1,29 +1,35 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { SendNotification } from '../../utilies/utilies'
-import { Button, Col, Form, Input, Row } from 'antd'
-import { useDispatch } from 'react-redux'
-import {loginDetails} from '../../redux/action/login/login.action'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { SendNotification } from "../../utilies/utilies";
+import { Button, Col, Form, Input, Row } from "antd";
+import { useDispatch } from "react-redux";
+import { loginDetails } from "../../redux/action/login/login.action";
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const onFinish = (data) => {
-    dispatch(loginDetails(data)).then((res)=>{
-      const { payload } = res;
+    dispatch(loginDetails(data)).then((res) => {
+      const { payload, type } = res;
+      console.log(res, "payload");
 
-      localStorage.setItem("token", payload?.token);
-      localStorage.setItem("uid", payload?.data?.id);
-      SendNotification({type: 's', message: 'Login successful'});
-      navigate('/dashboard');
-    })
+      if (type !== "POST_LOGIN_DATA_FAILURE") {
+        localStorage.setItem("token", payload?.token);
+        localStorage.setItem("uid", payload?.data?.id);
+        SendNotification({ type: "s", message: "Login successful" });
+        navigate("/dashboard");
+      } else {
+        SendNotification({ type: "e", message: "Wrong credentials" });
+        navigate("/admin");
+      }
+    });
   };
 
   return (
     <>
-      <div className='login_Wrapper'>
-        <div className='login_outer_box'>
-          <div className='login_inner_box'>
+      <div className="login_Wrapper">
+        <div className="login_outer_box">
+          <div className="login_inner_box">
             <h1>Admin Panel</h1>
             <Row>
               <Col span={24}>
@@ -35,7 +41,7 @@ const Login = () => {
                     remember: true,
                   }}
                   autoComplete="off"
-                  layout='vertical'
+                  layout="vertical"
                 >
                   <Form.Item
                     label="Email Address"
@@ -43,11 +49,14 @@ const Login = () => {
                     rules={[
                       {
                         required: true,
-                        message: 'Please enter your email address',
+                        message: "Please enter your email address",
                       },
                     ]}
                   >
-                    <Input className='form_input' placeholder="Your email address" />
+                    <Input
+                      className="form_input"
+                      placeholder="Your email address"
+                    />
                   </Form.Item>
                   <Form.Item
                     label="Password"
@@ -55,27 +64,34 @@ const Login = () => {
                     rules={[
                       {
                         required: true,
-                        message: 'Please enter your password',
+                        message: "Please enter your password",
                       },
                     ]}
                   >
-                    <Input type="password" className='form_input' placeholder="Your password" />
+                    <Input
+                      type="password"
+                      className="form_input"
+                      placeholder="Your password"
+                    />
                   </Form.Item>
 
-                  <Form.Item className='text_center'>
-                    <Button type="primary" htmlType="submit" className="btn-primary btn-login">
+                  <Form.Item className="text_center">
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      className="btn-primary btn-login"
+                    >
                       Login
                     </Button>
                   </Form.Item>
-                  </Form>
+                </Form>
               </Col>
             </Row>
           </div>
         </div>
       </div>
-
     </>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

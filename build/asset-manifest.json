@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0f4d58ed.css",
-    "main.js": "/static/js/main.97b47635.js",
+    "main.js": "/static/js/main.02aaa66b.js",
     "static/js/703.855c7b70.chunk.js": "/static/js/703.855c7b70.chunk.js",
     "static/js/142.f9a133bd.chunk.js": "/static/js/142.f9a133bd.chunk.js",
     "static/media/Avenir-Heavy.ttf": "/static/media/Avenir-Heavy.48a3f8978b35989a3418.ttf",
@@ -28,12 +28,12 @@
     "static/media/ngl_logo_big.png": "/static/media/ngl_logo_big.eee09ceba513fb028d90.png",
     "index.html": "/index.html",
     "main.0f4d58ed.css.map": "/static/css/main.0f4d58ed.css.map",
-    "main.97b47635.js.map": "/static/js/main.97b47635.js.map",
+    "main.02aaa66b.js.map": "/static/js/main.02aaa66b.js.map",
     "703.855c7b70.chunk.js.map": "/static/js/703.855c7b70.chunk.js.map",
     "142.f9a133bd.chunk.js.map": "/static/js/142.f9a133bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f4d58ed.css",
-    "static/js/main.97b47635.js"
+    "static/js/main.02aaa66b.js"
   ]
 }
