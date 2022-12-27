@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0f4d58ed.css",
+    "main.js": "/static/js/main.97b47635.js",
+    "static/js/703.855c7b70.chunk.js": "/static/js/703.855c7b70.chunk.js",
+    "static/js/142.f9a133bd.chunk.js": "/static/js/142.f9a133bd.chunk.js",
+    "static/media/Avenir-Heavy.ttf": "/static/media/Avenir-Heavy.48a3f8978b35989a3418.ttf",
+    "static/media/Avenir-Medium.ttf": "/static/media/Avenir-Medium.97d0ed77a4cdc58c808c.ttf",
+    "static/media/Avenir-Black.ttf": "/static/media/Avenir-Black.c1e937cae283b2d3e110.ttf",
+    "static/media/Avenir-Light.ttf": "/static/media/Avenir-Light.cd7c2d8dee3d19838c7d.ttf",
+    "static/media/Avenir-Regular.ttf": "/static/media/Avenir-Regular.4b5f4cf2dda18ee41fbd.ttf",
+    "static/media/bg_login.webp": "/static/media/bg_login.f464099087ca75291bef.webp",
+    "static/media/Avenir-Black.eot": "/static/media/Avenir-Black.3cdbca66ead225440b16.eot",
+    "static/media/Avenir-Heavy.eot": "/static/media/Avenir-Heavy.1830e630f83fcc763c59.eot",
+    "static/media/Avenir-Medium.eot": "/static/media/Avenir-Medium.d1e47a4635d8fc16a19c.eot",
+    "static/media/Avenir-Light.eot": "/static/media/Avenir-Light.a271e7e06899f197a19d.eot",
+    "static/media/Avenir-Regular.eot": "/static/media/Avenir-Regular.9f3e18390e33f910fe3b.eot",
+    "static/media/Avenir-Heavy.woff": "/static/media/Avenir-Heavy.04ff2d80f11e88f2847b.woff",
+    "static/media/Avenir-Black.woff": "/static/media/Avenir-Black.c25262ed998f674cf240.woff",
+    "static/media/Avenir-Medium.woff": "/static/media/Avenir-Medium.9f22f49de0e1759465de.woff",
+    "static/media/Avenir-Light.woff": "/static/media/Avenir-Light.a8fcc7c8f352bfbc33ee.woff",
+    "static/media/Avenir-Regular.woff": "/static/media/Avenir-Regular.9aba3e321c3fbffb7106.woff",
+    "static/media/Avenir-Heavy.woff2": "/static/media/Avenir-Heavy.152ad3c13d1c14a3e0e5.woff2",
+    "static/media/Avenir-Black.woff2": "/static/media/Avenir-Black.b99243deda2648c2b5dc.woff2",
+    "static/media/Avenir-Medium.woff2": "/static/media/Avenir-Medium.048fa284e7c9359c8535.woff2",
+    "static/media/Avenir-Light.woff2": "/static/media/Avenir-Light.bbfde3e7d82cbb8b98fb.woff2",
+    "static/media/Avenir-Regular.woff2": "/static/media/Avenir-Regular.6af8ef390619dd1f7ff6.woff2",
+    "static/media/ngl_logo_big.png": "/static/media/ngl_logo_big.eee09ceba513fb028d90.png",
+    "index.html": "/index.html",
+    "main.0f4d58ed.css.map": "/static/css/main.0f4d58ed.css.map",
+    "main.97b47635.js.map": "/static/js/main.97b47635.js.map",
+    "703.855c7b70.chunk.js.map": "/static/js/703.855c7b70.chunk.js.map",
+    "142.f9a133bd.chunk.js.map": "/static/js/142.f9a133bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f4d58ed.css",
+    "static/js/main.97b47635.js"
+  ]
+}
